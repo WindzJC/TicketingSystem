@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Welcome message -->
+
+    <!-- Add Ticket button -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Welcome,"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/add_ticket_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome_text"
+        android:layout_marginTop="32dp"
+        android:text="Add Ticket"
+        android:textSize="18sp" />
+
+    <!-- View Tickets button -->
+    <Button
+        android:id="@+id/view_tickets_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_ticket_button"
+        android:layout_marginTop="16dp"
+        android:text="View Tickets"
+        android:textSize="18sp" />
+
+    <!-- Generate Report button -->
+    <Button
+        android:id="@+id/generate_report_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_tickets_button"
+        android:layout_marginTop="16dp"
+        android:text="Generate Report"
+        android:textSize="18sp" />
+
+    <!-- Logout button -->
+    <Button
+        android:id="@+id/logout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generate_report_button"
+        android:layout_marginTop="16dp"
+        android:text="Logout"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar or action bar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:title="Generate Report" />
+
+    <!-- Date range selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Start date input -->
+        <EditText
+            android:id="@+id/start_date_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Start Date"
+            android:inputType="date"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+        <!-- End date input -->
+        <EditText
+            android:id="@+id/end_date_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="End Date"
+            android:inputType="date"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Report type selection -->
+    <RadioGroup
+        android:id="@+id/report_type_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Daily report option -->
+        <RadioButton
+            android:id="@+id/daily_report_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daily Report"
+            android:textSize="16sp" />
+
+        <!-- Weekly report option -->
+        <RadioButton
+            android:id="@+id/weekly_report_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weekly Report"
+            android:textSize="16sp" />
+
+        <!-- Monthly report option -->
+        <RadioButton
+            android:id="@+id/monthly_report_radiobutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monthly Report"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <!-- Generate report button -->
+    <Button
+        android:id="@+id/generate_report_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Report"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>
