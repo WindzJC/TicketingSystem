@@ -1,94 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/title_text_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ticket Details"
-        android:textSize="24sp"
-        android:textColor="#fff"
-        android:padding="16dp"
-        android:background="#2ecc71" />
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ViewTicket">
 
     <TextView
         android:id="@+id/driver_name_label_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Driver Name"
-        android:textSize="16sp"
-        android:textColor="#fff"
-        android:layout_below="@id/title_text_view"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp" />
+        android:text="Driver Name:"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/driver_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#fff"
-        android:layout_toEndOf="@id/driver_name_label_text_view"
-        android:layout_alignBaseline="@id/driver_name_label_text_view" />
+        android:layout_below="@id/driver_name_label_text_view"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/license_plate_label_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="License Plate"
-        android:textSize="16sp"
-        android:textColor="#fff"
-        android:layout_below="@id/driver_name_label_text_view"
+        android:text="License Plate:"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp" />
+        android:layout_below="@id/driver_name_text_view"/>
 
     <TextView
         android:id="@+id/license_plate_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#fff"
-        android:layout_toEndOf="@id/license_plate_label_text_view"
-        android:layout_alignBaseline="@id/license_plate_label_text_view" />
+        android:layout_below="@id/license_plate_label_text_view"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/violation_label_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Violation"
-        android:textSize="16sp"
-        android:textColor="#fff"
-        android:layout_below="@id/license_plate_label_text_view"
+        android:text="Violation:"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp" />
+        android:layout_below="@id/license_plate_text_view"/>
 
     <TextView
         android:id="@+id/violation_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="#fff"
-        android:layout_toEndOf="@id/violation_label_text_view"
-        android:layout_alignBaseline="@id/violation_label_text_view" />
+        android:layout_below="@id/violation_label_text_view"
+        android:textSize="16sp"/>
 
     <TextView
         android:id="@+id/date_label_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date"
-        android:textSize="16sp"
-        android:textColor="#fff"
-        android:layout_below="@id/violation_label_text_view"
+        android:text="Date:"
+        android:textStyle="bold"
+        android:textSize="18sp"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_below="@id/violation_text_view"/>
 
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/date_text_view"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:text="@string/submit_button_text" />
+        android:layout_below="@id/date_label_text_view"
+        android:textSize="16sp"/>
 
+    <TextView
+        android:id="@+id/fine_amount_label_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fine Amount:"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/date_text_view"/>
+
+    <TextView
+        android:id="@+id/fine_amount_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fine_amount_label_text_view"
+        android:textSize="16sp"/>
 
 </RelativeLayout>

@@ -5,39 +5,51 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Add Ticket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Add Ticket"
+        android:textAlignment="center"
         android:textSize="24sp"
-        android:gravity="center"
-        android:padding="16dp"/>
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp" />
 
     <EditText
         android:id="@+id/driver_name_edit_text"
-        android:hint="Driver Name"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Driver Name" />
 
     <EditText
         android:id="@+id/license_plate_edit_text"
-        android:hint="License Plate"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="License Plate" />
 
     <EditText
         android:id="@+id/violation_edit_text"
-        android:hint="Violation"
-        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="Violation" />
+
+    <EditText
+        android:id="@+id/date_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date" />
+
+    <EditText
+        android:id="@+id/fine_amount_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fine Amount" />
 
     <Button
-        android:id="@+id/save_button"
-        android:text="Save"
-        android:layout_margin="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:id="@+id/add_ticket_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Ticket"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
 </LinearLayout>

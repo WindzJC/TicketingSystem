@@ -1,13 +1,12 @@
 package com.example.ticketingsystem;
 
-import android.annotation.SuppressLint;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class AddTicket extends AppCompatActivity {
 
@@ -15,38 +14,37 @@ public class AddTicket extends AppCompatActivity {
     private EditText licensePlateEditText;
     private EditText violationEditText;
     private EditText dateEditText;
-    private Button saveButton;
+    private EditText fineAmountEditText;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addticket);
 
         driverNameEditText = findViewById(R.id.driver_name_edit_text);
-        licensePlateEditText = findViewById(R.id.edit_text_license_plate);
-        violationEditText = findViewById(R.id.edit_text_violation);
-        dateEditText = findViewById(R.id.edit_text_date);
-        saveButton = findViewById(R.id.save_button);
+        licensePlateEditText = findViewById(R.id.license_plate_edit_text);
+        violationEditText = findViewById(R.id.violation_edit_text);
+        dateEditText = findViewById(R.id.date_edit_text);
+        fineAmountEditText = findViewById(R.id.fine_amount_edit_text);
 
+        Button saveButton = findViewById(R.id.add_ticket_button);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String driverName = driverNameEditText.getText().toString().trim();
-                String licensePlate = licensePlateEditText.getText().toString().trim();
-                String violation = violationEditText.getText().toString().trim();
-                String date = dateEditText.getText().toString().trim();
+                String driverName = driverNameEditText.getText().toString();
+                String licensePlate = licensePlateEditText.getText().toString();
+                String violation = violationEditText.getText().toString();
+                String date = dateEditText.getText().toString();
+                String fineAmount = fineAmountEditText.getText().toString();
 
-                if (driverName.isEmpty() || licensePlate.isEmpty() || violation.isEmpty() || date.isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Please fill all fields", Toast.LENGTH_LONG).show();
-                } else {
-                    // TODO: Save ticket data to database or other storage mechanism
-                    Toast.makeText(getApplicationContext(), "Ticket added successfully", Toast.LENGTH_LONG).show();
-                    finish();
-                }
+                Intent intent = new Intent(AddTicket.this, ViewTicket.class);
+                intent.putExtra("driverName", driverName);
+                intent.putExtra("licensePlate", licensePlate);
+                intent.putExtra("violation", violation);
+                intent.putExtra("date", date);
+                intent.putExtra("fineAmount", fineAmount);
+                startActivity(intent);
             }
         });
-
-
     }
 }

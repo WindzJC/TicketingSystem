@@ -30,22 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 String username = mUsernameEditText.getText().toString();
                 String password = mPasswordEditText.getText().toString();
 
-                if (username.equals("user") && password.equals("password")) {
-                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        mLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username = mUsernameEditText.getText().toString();
-                String password = mPasswordEditText.getText().toString();
-
-                if (username.equals("user") && password.equals("123")) {
+                if (username.equals("") && password.equals("")) {
                     Intent intent = new Intent(MainActivity.this, Dashboard.class);
                     startActivity(intent);
                 } else {
@@ -53,6 +38,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
