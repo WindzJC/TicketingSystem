@@ -15,7 +15,7 @@ public class AddTicket extends AppCompatActivity {
     private EditText licensePlateEditText;
     private EditText violationEditText;
     private EditText dateEditText;
-    private Button submitButton;
+    private Button saveButton;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,9 +27,9 @@ public class AddTicket extends AppCompatActivity {
         licensePlateEditText = findViewById(R.id.edit_text_license_plate);
         violationEditText = findViewById(R.id.edit_text_violation);
         dateEditText = findViewById(R.id.edit_text_date);
-        submitButton = findViewById(R.id.submit_button);
+        saveButton = findViewById(R.id.save_button);
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
+        saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String driverName = driverNameEditText.getText().toString().trim();
