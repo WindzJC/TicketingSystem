@@ -1,57 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
+        android:text="Add Ticket"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add_ticket_title"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:padding="16dp"/>
 
     <EditText
-        android:id="@+id/driver_name_edittext"
+        android:id="@+id/driver_name_edit_text"
+        android:hint="Driver Name"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/driver_name_hint" />
+        android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/driver_license_edittext"
+        android:id="@+id/license_plate_edit_text"
+        android:hint="License Plate"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/driver_license_hint" />
+        android:layout_height="wrap_content"/>
 
     <EditText
-        android:id="@+id/violation_type_edittext"
+        android:id="@+id/violation_edit_text"
+        android:hint="Violation"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="@string/violation_type_hint" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/violation_date_label" />
-
-    <EditText
-        android:id="@+id/violation_date_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/violation_date_hint"
-        android:inputType="date"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/add_ticket_button"
+        android:id="@+id/save_button"
+        android:text="Save"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/add_ticket_button_text" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

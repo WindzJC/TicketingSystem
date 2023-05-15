@@ -82,5 +82,13 @@
         android:layout_below="@id/violation_label_text_view"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"/>
-</RelativeLayout>
 
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="@string/submit_button_text" />
+
+
+</RelativeLayout>

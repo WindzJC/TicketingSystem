@@ -1,99 +1,58 @@
 package com.example.ticketingsystem;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    // Views
-    private EditText driverNameEditText;
-    private EditText driverLicenseEditText;
-    private EditText vehicleInfoEditText;
-    private EditText violationTypeEditText;
-    private EditText violationDescriptionEditText;
-    private EditText violationDateEditText;
-    private EditText fineAmountEditText;
-    private Button addTicketButton;
-    private Button cancelButton;
+import androidx.appcompat.app.AppCompatActivity;
 
-    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
+public class MainActivity extends AppCompatActivity {
+
+    private EditText mUsernameEditText;
+    private EditText mPasswordEditText;
+    private Button mLoginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find views by id
-        driverNameEditText = findViewById(R.id.edit_text_driver_name);
-        driverLicenseEditText = findViewById(R.id.edit_text_license_plate);
-        violationTypeEditText = findViewById(R.id.edit_text_violation);
-        violationDescriptionEditText = findViewById(R.id.edit_text_violation);
-        violationDateEditText = findViewById(R.id.edit_text_violation);
-        fineAmountEditText = findViewById(R.id.fine_amount_edittext);
-        addTicketButton = findViewById(R.id.edit_ticket_title);
-        cancelButton = findViewById(R.id.cancel_button);
+        mUsernameEditText = findViewById(R.id.username_field);
+        mPasswordEditText = findViewById(R.id.password_field);
+        mLoginButton = findViewById(R.id.login_button);
 
-        // Set click listener on add ticket button
-        addTicketButton.setOnClickListener(new View.OnClickListener() {
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Get values from EditText fields
-                String driverName = driverNameEditText.getText().toString().trim();
-                String driverLicense = driverLicenseEditText.getText().toString().trim();
-                String vehicleInfo = vehicleInfoEditText.getText().toString().trim();
-                String violationType = violationTypeEditText.getText().toString().trim();
-                String violationDescription = violationDescriptionEditText.getText().toString().trim();
-                String violationDate = violationDateEditText.getText().toString().trim();
-                String fineAmountString = fineAmountEditText.getText().toString().trim();
+                String username = mUsernameEditText.getText().toString();
+                String password = mPasswordEditText.getText().toString();
 
-                // Validate inputs
-                if (driverName.isEmpty() || driverLicense.isEmpty() || vehicleInfo.isEmpty()
-                        || violationType.isEmpty() || violationDescription.isEmpty()
-                        || violationDate.isEmpty() || fineAmountString.isEmpty()) {
-                    Toast.makeText(MainActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
-                    return;
+                if (username.equals("user") && password.equals("password")) {
+                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
-
-                // Convert fine amount to double
-                double fineAmount = Double.parseDouble(fineAmountString);
-
-                // Create new ticket object
-                Ticket ticket = new Ticket(driverName, driverLicense, vehicleInfo,
-                        violationType, violationDescription, violationDate, fineAmount);
-
-                // TODO: Save ticket to database or send to server
-
-                // Show success message
-                Toast.makeText(MainActivity.this, "Ticket added successfully", Toast.LENGTH_SHORT).show();
-
-                // Clear input fields
-                driverNameEditText.getText().clear();
-                driverLicenseEditText.getText().clear();
-                vehicleInfoEditText.getText().clear();
-                violationTypeEditText.getText().clear();
-                violationDescriptionEditText.getText().clear();
-                violationDateEditText.getText().clear();
-                fineAmountEditText.getText().clear();
             }
         });
 
-        // Set click listener on cancel button
-        cancelButton.setOnClickListener(new View.OnClickListener() {
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Clear input fields
-                driverNameEditText.getText().clear();
-                driverLicenseEditText.getText().clear();
-                vehicleInfoEditText.getText().clear();
-                violationTypeEditText.getText().clear();
-                violationDescriptionEditText.getText().clear();
-                violationDateEditText.getText().clear();
-                fineAmountEditText.getText().clear();
+                String username = mUsernameEditText.getText().toString();
+                String password = mPasswordEditText.getText().toString();
+
+                if (username.equals("user") && password.equals("123")) {
+                    Intent intent = new Intent(MainActivity.this, Dashboard.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
     }
 }

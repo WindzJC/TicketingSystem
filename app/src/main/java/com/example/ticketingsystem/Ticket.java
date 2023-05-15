@@ -1,49 +1,49 @@
 package com.example.ticketingsystem;
 
+import java.util.Date;
+
 public class Ticket {
     private String driverName;
     private String licensePlate;
     private String violation;
-    private String date;
+    private Date date;
 
-    public Ticket(String name, String driverLicense, String driverName, String licensePlate, String violationDescription, String violationDate, double fineAmount) {
+    public Ticket(String driverName, String licensePlate, String violation, Date date) {
         this.driverName = driverName;
         this.licensePlate = licensePlate;
         this.violation = violation;
         this.date = date;
     }
 
-    public Ticket(String driverName, String driverLicense, String licensePlate, String violation) {
-    }
-
     public String getDriverName() {
         return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
     }
 
     public String getLicensePlate() {
         return licensePlate;
     }
 
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
+    }
+
     public String getViolation() {
         return violation;
     }
 
-    public String getDate() {
+    public void setViolation(String violation) {
+        this.violation = violation;
+    }
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDriverName(String toString) {
-    }
-
-    public void setLicensePlate(String toString) {
-    }
-
-    public void setViolation(String toString) {
-    }
-
-    public void setDate(String toString) {
-    }
-
-    public void setFineAmount(double parseDouble) {
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

@@ -4,9 +4,10 @@
     <string name="driver_name_hint">Driver Name</string>
     <string name="driver_license_hint">License Plate</string>
     <string name="violation_type_hint">Violation Type</string>
-    <string name="violation_date_label">Violation Date</string>
+    <string name="date_label">Date</string>
     <string name="violation_date_hint">MM/DD/YYYY</string>
     <string name="add_ticket_button_text">Add Ticket</string>
+    <string name="submit_button_text">Submit</string>
     <string name="welcome_text">Add Ticket</string>
 
 </resources>
